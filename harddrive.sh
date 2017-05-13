@@ -9,7 +9,9 @@ if [ $response = "Y" ]; then
   mGID="$(id -g www-data)"
   mUID="$(id -u www-data)"
   mUUID="$(ls -l /dev/disk/by-uuid | grep sda1 | cut -d ' ' -f9 | head -n1)"
+  sudo chmod 666 /etc/fstab
   sudo echo "UUID=${mUUID} /media/ownclouddrive auto nofail,uid=${mUID},gid=${mGID},umask=0027,dmask=0027,noatime 0 0" >> /etc/fstab
+  sudo chmod 644 /etc/fstab
   echo "Added drive with UUID=${mUUID} to fstab. Please reboot pi to mount the drive."
 else
   echo "Cancelled."
