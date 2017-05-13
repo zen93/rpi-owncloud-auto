@@ -89,7 +89,9 @@ server {
    }
 }"
 
-sudo sh -c "echo \"$SERVERCONFIG\" > /etc/nginx/sites-available/default"
+sudo chmod 666 /etc/nginx/sites-available/default
+echo "$SERVERCONFIG" > /etc/nginx/sites-available/default
+sudo chmod 644 /etc/nginx/sites-available/default
 
 echo "Configuring PHP and other stuff..."
 sudo sed -i 's/^upload_max_filesize.*$/upload_max_filesize = 2000M/' /etc/php5/fpm/php.ini
