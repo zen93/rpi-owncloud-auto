@@ -4,8 +4,8 @@ It is assumed the drive is located at /sda1. If it is not please make the requir
 echo "Continue? (Y/n)"
 read response
 if [ $response = "Y" ]; then
-  sudo apt-get install ntfs-3g
-  mkdir /media/ownclouddrive
+  sudo apt-get -y install ntfs-3g
+  sudo mkdir /media/ownclouddrive
   mGID="$(id -g www-data)"
   mUID="$(id -u www-data)"
   mUUID="$(ls -l /dev/disk/by-uuid | grep sda1 | cut -d ' ' -f9 | head -n1)"
