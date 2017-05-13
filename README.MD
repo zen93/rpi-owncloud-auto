@@ -27,3 +27,6 @@ Installation steps on a Raspberry Pi:
 All the steps have been taken from https://pimylifeup.com/raspberry-pi-owncloud/.
 Use that as reference if stuck somewhere.
 I have tried my best to make it easy to automate this whole process. Hope you enjoy using this tool!
+
+If you want your HDD to spin down after X minutes, have a look at:
+https://www.htpcguides.com/spin-down-and-manage-hard-drive-power-on-raspberry-pi/
